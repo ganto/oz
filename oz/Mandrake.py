@@ -83,7 +83,7 @@ label customiso
         Method to create a new ISO based on the modified CD/DVD.
         """
         self.log.info("Generating new ISO")
-        oz.ozutil.subprocess_check_output(["genisoimage", "-r", "-V", "Custom",
+        oz.ozutil.subprocess_check_output(["mkisofs", "-r", "-V", "Custom",
                                            "-J", "-l", "-no-emul-boot",
                                            "-b", "isolinux/isolinux.bin",
                                            "-c", "isolinux/boot.cat",
@@ -155,7 +155,7 @@ label customiso
         Method to create a new ISO based on the modified CD/DVD.
         """
         self.log.info("Generating new ISO")
-        oz.ozutil.subprocess_check_output(["genisoimage", "-r", "-V", "Custom",
+        oz.ozutil.subprocess_check_output(["mkisofs", "-r", "-V", "Custom",
                                            "-J", "-cache-inodes",
                                            "-b", "Boot/cdrom.img",
                                            "-c", "Boot/boot.cat",

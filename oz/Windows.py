@@ -64,7 +64,7 @@ class Windows_v5(Windows):
         Method to create a new ISO based on the modified CD/DVD.
         """
         self.log.debug("Generating new ISO")
-        oz.ozutil.subprocess_check_output(["genisoimage",
+        oz.ozutil.subprocess_check_output(["mkisofs",
                                            "-b", "cdboot/boot.bin",
                                            "-no-emul-boot", "-boot-load-seg",
                                            "1984", "-boot-load-size", "4",
@@ -165,9 +165,9 @@ class Windows_v6(Windows):
         Method to create a new ISO based on the modified CD/DVD.
         """
         self.log.debug("Generating new ISO")
-        # NOTE: Windows 2008 is very picky about which arguments to genisoimage
+        # NOTE: Windows 2008 is very picky about which arguments to mkisofs
         # will generate a bootable CD, so modify these at your own risk
-        oz.ozutil.subprocess_check_output(["genisoimage",
+        oz.ozutil.subprocess_check_output(["mkisofs",
                                            "-b", "cdboot/boot.bin",
                                            "-no-emul-boot", "-c", "BOOT.CAT",
                                            "-iso-level", "2", "-J", "-l", "-D",
@@ -250,7 +250,7 @@ class Windows_v10(Windows):
         Method to create a new ISO based on the modified CD/DVD.
         """
         self.log.debug("Generating new ISO")
-        oz.ozutil.subprocess_check_output(["genisoimage",
+        oz.ozutil.subprocess_check_output(["mkisofs",
                                            "-b", "cdboot/boot.bin",
                                            "-no-emul-boot", "-c", "BOOT.CAT",
                                            "-iso-level", "2", "-J", "-l", "-D",

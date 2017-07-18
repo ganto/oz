@@ -40,7 +40,7 @@ class FreeBSD(oz.Guest.CDGuest):
         Method to create a new ISO based on the modified CD/DVD.
         """
         self.log.debug("Generating new ISO")
-        oz.ozutil.subprocess_check_output(["genisoimage",
+        oz.ozutil.subprocess_check_output(["mkisofs",
                                            "-R", "-no-emul-boot",
                                            "-b", "boot/cdboot", "-v",
                                            "-o", self.output_iso,

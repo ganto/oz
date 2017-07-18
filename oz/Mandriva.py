@@ -95,7 +95,7 @@ label customiso
         isolinuxbin = os.path.join(isolinuxdir, "isolinux/isolinux.bin")
         isolinuxboot = os.path.join(isolinuxdir, "isolinux/boot.cat")
 
-        oz.ozutil.subprocess_check_output(["genisoimage", "-r", "-V", "Custom",
+        oz.ozutil.subprocess_check_output(["mkisofs", "-r", "-V", "Custom",
                                            "-J", "-l", "-no-emul-boot",
                                            "-b", isolinuxbin,
                                            "-c", isolinuxboot,
