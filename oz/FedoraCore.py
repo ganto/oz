@@ -62,7 +62,7 @@ class FedoraCoreGuest(oz.RedHat.RedHatLinuxCDGuest):
         oz.RedHat.RedHatLinuxCDGuest.__init__(self, tdl, config, auto,
                                               output_disk, netdev, diskbus,
                                               True, True, self.config.initrdtype,
-                                              macaddress)
+                                              macaddress, False)
 
         # FIXME: if doing an ISO install, we have to check that the ISO passed
         # in is the DVD, not the CD (since we can't change disks midway)

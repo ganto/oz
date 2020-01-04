@@ -71,7 +71,8 @@ class RHEL4Guest(oz.RedHat.RedHatLinuxCDGuest):
         # it looks ugly so for now we will just always use the boot.iso method
         oz.RedHat.RedHatLinuxCDGuest.__init__(self, tdl, config, auto,
                                               output_disk, nicmodel, diskbus,
-                                              True, True, None, macaddress)
+                                              True, True, None, macaddress,
+                                              False)
 
     def _modify_iso(self):
         """

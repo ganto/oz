@@ -68,7 +68,8 @@ class MandrakeGuest(oz.Guest.CDGuest):
     def __init__(self, tdl, config, auto, output_disk, netdev, diskbus,
                  macaddress):
         oz.Guest.CDGuest.__init__(self, tdl, config, auto, output_disk, netdev,
-                                  None, None, diskbus, True, False, macaddress)
+                                  None, None, diskbus, True, False, macaddress,
+                                  False)
 
         if self.tdl.arch != "i386":
             raise oz.OzException.OzException("Mandrake only supports i386 architecture")

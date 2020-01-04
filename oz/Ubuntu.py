@@ -699,7 +699,7 @@ class UbuntuGuest(oz.Linux.LinuxCDGuest):
 
         oz.Linux.LinuxCDGuest.__init__(self, tdl, config, auto, output_disk,
                                        nicmodel, diskbus, True, True,
-                                       macaddress)
+                                       macaddress, False)
 
         self.crond_was_active = False
         self.sshd_was_active = False

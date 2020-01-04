@@ -58,7 +58,8 @@ class MandrivaGuest(oz.Guest.CDGuest):
     def __init__(self, tdl, config, auto, output_disk, netdev, diskbus,
                  macaddress):
         oz.Guest.CDGuest.__init__(self, tdl, config, auto, output_disk, netdev,
-                                  None, None, diskbus, True, False, macaddress)
+                                  None, None, diskbus, True, False, macaddress,
+                                  False)
 
         self.mandriva_arch = self.tdl.arch
         if self.mandriva_arch == "i386":

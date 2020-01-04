@@ -39,7 +39,7 @@ class Windows(oz.Guest.CDGuest):
                  macaddress):
         oz.Guest.CDGuest.__init__(self, tdl, config, auto, output_disk,
                                   netdev, "localtime", "usb", diskbus, True,
-                                  False, macaddress)
+                                  False, macaddress, False)
 
         if self.tdl.key is None:
             raise oz.OzException.OzException("A key is required when installing Windows")

@@ -80,7 +80,7 @@ class RHEL5Guest(oz.RedHat.RedHatLinuxCDYumGuest):
         oz.RedHat.RedHatLinuxCDYumGuest.__init__(self, tdl, config, auto,
                                                  output_disk, nicmodel, diskbus,
                                                  True, True, "cpio", macaddress,
-                                                 True)
+                                                 True, False)
 
     def _modify_iso(self):
         """

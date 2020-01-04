@@ -35,7 +35,7 @@ class RHEL7Guest(oz.RedHat.RedHatLinuxCDYumGuest):
         oz.RedHat.RedHatLinuxCDYumGuest.__init__(self, tdl, config, auto,
                                                  output_disk, netdev, diskbus,
                                                  True, True, "cpio", macaddress,
-                                                 True)
+                                                 True, False)
         self.virtio_channel_name = 'org.fedoraproject.anaconda.log.0'
 
     def _modify_iso(self):

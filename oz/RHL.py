@@ -38,7 +38,8 @@ class RHL9Guest(oz.RedHat.RedHatLinuxCDGuest):
         # after unpacking the initrd
         oz.RedHat.RedHatLinuxCDGuest.__init__(self, tdl, config, auto,
                                               output_disk, netdev, diskbus,
-                                              False, True, None, macaddress)
+                                              False, True, None, macaddress,
+                                              False)
 
         if self.tdl.arch != "i386":
             raise oz.OzException.OzException("Invalid arch " + self.tdl.arch + "for RHL guest")
@@ -86,7 +87,7 @@ class RHL7xand8Guest(oz.RedHat.RedHatFDGuest):
     def __init__(self, tdl, config, auto, output_disk, nicmodel, diskbus,
                  macaddress):
         oz.RedHat.RedHatFDGuest.__init__(self, tdl, config, auto, output_disk,
-                                         nicmodel, diskbus, macaddress)
+                                         nicmodel, diskbus, macaddress, False)
 
     def get_auto_path(self):
         return oz.ozutil.generate_full_auto_path("RedHatLinux" + self.tdl.update + ".auto")

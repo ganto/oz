@@ -100,7 +100,8 @@ class DebianGuest(oz.Linux.LinuxCDGuest):
         if diskbus is None:
             diskbus = self.config.default_diskbus
         oz.Linux.LinuxCDGuest.__init__(self, tdl, config, auto, output_disk,
-                                       netdev, diskbus, True, True, macaddress)
+                                       netdev, diskbus, True, True, macaddress,
+                                       False)
 
         self.crond_was_active = False
         self.sshd_was_active = False

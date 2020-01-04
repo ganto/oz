@@ -32,7 +32,7 @@ class RHEL21Guest(oz.RedHat.RedHatFDGuest):
     def __init__(self, tdl, config, auto, output_disk, netdev, diskbus,
                  macaddress):
         oz.RedHat.RedHatFDGuest.__init__(self, tdl, config, auto, output_disk,
-                                         netdev, diskbus, macaddress)
+                                         netdev, diskbus, macaddress, False)
 
     def get_auto_path(self):
         """

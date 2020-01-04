@@ -45,7 +45,7 @@ class RHEL3Guest(oz.RedHat.RedHatLinuxCDGuest):
         oz.RedHat.RedHatLinuxCDGuest.__init__(self, tdl, config, auto,
                                               output_disk, netdev, diskbus,
                                               iso_support, True, None,
-                                              macaddress)
+                                              macaddress, False)
 
         # override the sshd_config value set in RedHatLinuxCDGuest.__init__
         self.sshd_config = """\
