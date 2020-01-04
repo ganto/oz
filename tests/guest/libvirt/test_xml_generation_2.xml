@@ -1,7 +1,7 @@
 <domain type="kvm">
   <name>tester</name>
-  <memory>1048576</memory>
-  <currentMemory>1048576</currentMemory>
+  <memory>2097152</memory>
+  <currentMemory>2097152</currentMemory>
   <uuid>%s</uuid>
   <clock offset="utc"/>
   <vcpu>1</vcpu>
