@@ -33,6 +33,10 @@
       <protocol type="raw"/>
       <target port="1"/>
     </serial>
+    <rng model="virtio">
+      <rate bytes="1024" period="1000"/>
+      <backend model="random">/dev/random</backend>
+    </rng>
     <disk device="disk" type="file">
       <target dev="vda" bus="virtio"/>
       <source file="%s"/>
